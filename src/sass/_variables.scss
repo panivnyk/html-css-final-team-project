@@ -1,0 +1,47 @@
+:root {
+  // color
+  --pretitle-color: #ffa5ba;
+  --main-title-color: #d41443;
+  --secondary-title-color: #ffffff;
+
+  --main-text-color: #000000;
+  --secondary-text-color: #907e82;
+  --thirdly-text-color: #ffffff;
+
+  --main-btn-color: #d41443;
+  --main-btn-text-color: #ffffff;
+  --main-btn-hover-color: #c7133e;
+  --secondary-btn-color: #ffffff;
+  --secondary-btn-text-color: #d41443;
+  --secondary-btn-hover-color: #ecebeb;
+
+  //   sizes mobile
+  --big-title-size: 34px;
+  --small-title-size: 18px;
+  --products-title-size: 20px;
+
+  --main-text-size: 12px;
+  --products-text-size: 14px;
+}
+
+// sizes tablet
+@media screen and (min-width: 768px) {
+  :root {
+    --big-title-size: 48px;
+    --small-title-size: 26px;
+    --products-title-size: 20px;
+
+    --main-text-size: 14px;
+    --secondary-text-size: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --big-title-size: 58px;
+    --small-title-size: 30px;
+
+    --main-text-size: 16px;
+    --secondary-text-size: 14px;
+  }
+}
