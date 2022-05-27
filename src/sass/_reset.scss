@@ -19,3 +19,17 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
