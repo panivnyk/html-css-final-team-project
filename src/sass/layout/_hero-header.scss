@@ -1,26 +1,49 @@
+.header {
+    background-color: var(--hero-bg-color);
+}
+
 .header .container {
     background-color: var(--hero-bg-color);
     display: flex;
     justify-content: space-between;
     padding-top: 8px;
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+}
+
+.hero {
+    background-color: var(--hero-bg-color);
 }
 
 .hero .container {
     background-color: var(--hero-bg-color);
     padding-top: 136px;
     padding-bottom: 158px;
-    position: relative;
     overflow: hidden;
     background-image: url(../images/hero-pic.png), url(../images/ellipse.png);
     background-size: 171px, 346px;
     background-repeat: no-repeat;
     background-position: top 34px left 117px, top 25px left 36px;
-    @media screen and (min-width: 380px) {
-        background-position: top 34px center, top 25px center -6.5px;
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/hero-pic-2x.png), 
+                url(../images/ellipse.png);
     }
 }
 
-
+.header__menu-btn {
+    background-color: transparent;
+    border: none;
+    display: block;
+    cursor: pointer;
+    &--open {
+    fill: var(--main-title-color)}
+}
 
 .hero__label {
     font-family: 'Titan One';
