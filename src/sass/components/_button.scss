@@ -1,0 +1,29 @@
+.btn {
+  font-family: 'DM Sans';
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3; //21px
+
+  border: none;
+  background-color: inherit;
+}
+
+
+
+
+//  *********************************************
+
+
+//  *********************************************
+
+
+// contacts *********************************************
+.contacts-btn {
+  display: block;
+  margin: 0 auto;
+  &:first-child {
+    margin-bottom: 10px;
+  }
+}
+
