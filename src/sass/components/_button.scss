@@ -23,16 +23,16 @@
 }
 
 .btn-accent {
-  color: #fff;
-  background-color: #d41443;
+  color: var(--main-btn-text-color);
+  background-color: var(--main-btn-color);
 }
 
 .btn-white {
-  color: #d41443;
-  background-color: #fff;
+  color: var(--secondary-btn-text-color);
+  background-color: var(--secondary-btn-color);
 }
 // mob-menu *********************************************
-    // <button type="button" class="buy-btn btn btn-white">Buy now</button>   добавити ці класи
+// <button type="button" class="buy-btn btn btn-white">Buy now</button>   добавити ці класи
 
 .buy-btn {
   width: 209px;
@@ -43,7 +43,7 @@
   }
 
   &:hover {
-    background-color: #ecebeb;
+    background-color: var(--secondary-btn-hover-color);
   }
 }
 
@@ -52,14 +52,20 @@
 // contacts *********************************************
 .contacts-btn {
   width: 161px;
-  margin: 0 auto;
 
-  &.btn-accent::after {
-    margin-left: 8px;
-    // display: none; // якщо непотрібно
+  &.btn-accent {
+    background-color: #d41342;
+    &::after {
+      margin-left: 8px;
+      // display: none; // якщо непотрібно
+
+      @include tablet {
+        margin-left: 13px;
+      }
+    }
   }
 
-  &:first-child {
-    margin-bottom: 10px;
+  @include tablet {
+    width: 198px;
   }
 }
