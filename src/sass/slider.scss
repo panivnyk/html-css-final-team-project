@@ -4,19 +4,19 @@
 }
 .swiper {
     max-width: 100%;
-    height: 500px;
+    height: 520px;
     background-color: var(--secondary-bg-color);
     @media screen and (min-width: 328px) {
-            height: 470px ;
+            height: 490px ;
         }
         @media screen and (min-width: 337px) {
-            height: 440px;
+            height: 460px;
         }
             @media screen and (min-width: 375px) {
-                height: 410px;
+                height: 430px;
             }
                 @media screen and (min-width: 423px) {
-                    height: 380px;
+                    height: 405px;
                 }
 }
 .text-wrapper{
@@ -40,31 +40,37 @@
     z-index: 1;
 }
 .slider-text:before{
-    content: 'svg';
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     transform: translateY(-50%);
     display: inline-block;
-    width: 40px;
-    height: 54px;
-    color: red;
-    background-color: teal;
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/icon-quote.svg);
+    background-size: cover;
     z-index: -1;
 
 }
-.slider-text::after{
-    content: 'svg';
-    display: block;
-    margin: 0 auto;
-    width: 32px;
-    height: 4px;
-    color: red;
-    background-color: teal;
-}
-.signature{
+.signature {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.86;
     text-align: center;
+}
+.signature::before{
+    content: '';
+    display: block;
+    margin: 16px auto;
+    width: 32px;
+    height: 4px;
+    background-image: url(../images/icon-dots.svg);
+    background-size: contain;
+}
+.swiper .swiper-pagination-bullet-active{
+    background-image: url(../images/icon-home.svg);
+    background-size: cover;
+    border-radius: 0;
+    background-color: inherit;
 }

@@ -1,0 +1,65 @@
+.btn {
+  display: block;
+  height: 44px;
+
+  font-family: 'DM Sans';
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31; //21px
+  text-align: center;
+
+  border: none;
+  border-radius: 22px;
+  background-color: inherit;
+  cursor: pointer;
+
+  &::after {
+    content: '>';
+    width: 8px;
+    height: 8px;
+    margin-left: 13px;
+  }
+}
+
+.btn-accent {
+  color: #fff;
+  background-color: #d41443;
+}
+
+.btn-white {
+  color: #d41443;
+  background-color: #fff;
+}
+// mob-menu *********************************************
+    // <button type="button" class="buy-btn btn btn-white">Buy now</button>   добавити ці класи
+
+.buy-btn {
+  width: 209px;
+  margin: 60px auto 0px auto;
+
+  &::after {
+    margin-left: 20px;
+  }
+
+  &:hover {
+    background-color: #ecebeb;
+  }
+}
+
+//  *********************************************
+
+// contacts *********************************************
+.contacts-btn {
+  width: 161px;
+  margin: 0 auto;
+
+  &.btn-accent::after {
+    margin-left: 8px;
+    // display: none; // якщо непотрібно
+  }
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
+}

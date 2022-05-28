@@ -3,13 +3,21 @@
  * Все паршалы подключаются сюда.
  */
 
+
 // Стили для файла с примером HTML-фрагмента
+
 // @import './example';
 @import './variables';
+@import './mixins';
 @import './reset';
 @import './hidden';
 @import './common';
 @import './components/container';
+@import './components/button';
 @import './layout/advantages';
+@import './layout/mobile-menu';
 @import './layout/hero-header';
 @import './slider.scss';
+@import './layout/contacts';
+@import './layout/footer';
+
