@@ -4,18 +4,52 @@
 
   background-color: #fff5f6;
 
-  @media screen and (min-width: 768px) {
-    padding-top: 20px;
+  @media screen and (max-width: 768px) {
+    background-image: url('../images/advantages/mobile-milk-1x-bg.png');
+    background-size: contain;
+    background-position: 0px 574px;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/advantages/mobile-milk-2x-bg.png');
+    }
   }
 
-  @media screen and (min-width: 1280px) {
+  @include tablet {
+    padding-top: 20px;
+    padding-bottom: 84px;
+  }
+
+  @include desktop {
     padding-top: 60px;
+    padding-bottom: 120px;
+
+    background-image: url('../images/advantages/desktop-milk-1x-bg.png');
+    background-size: contain;
+    background-position: 0px 255px;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/advantages/desktop-milk-2x-bg.png');
+    }
   }
 }
 
 .about-wrap {
   margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
+
+  @include desktop {
+    margin-bottom: 21px;
+  }
+
   &__pretitle {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 15px;
 
     font-family: 'Titan One';
@@ -28,7 +62,7 @@
 
     color: var(--pretitle-color);
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       margin-bottom: 16px;
     }
   }
@@ -46,17 +80,17 @@
 
     color: var(--main-title-color);
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       margin-bottom: 40px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include desktop {
       margin-bottom: 79px;
     }
   }
 
   &__flex {
-    @media screen and (min-width: 768px) {
+    @include tablet {
       display: flex;
       justify-content: center;
 
@@ -70,15 +104,25 @@
     margin-right: auto;
     margin-left: auto;
 
-    @media screen and (min-width: 767px) {
+    @include tablet {
       width: 336px;
       margin-right: 32px;
       margin-left: 0;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include desktop {
       margin-right: 139px;
       width: 501px;
+    }
+  }
+
+  &__content {
+    @include tablet {
+      margin-right: 18px;
+    }
+
+    @include desktop {
+      margin-right: 161px;
     }
   }
 
@@ -94,15 +138,11 @@
 
     color: var(--main-text-color);
 
-    @media screen and (max-width: 768px) {
-      max-width: 334px;
-    }
-
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 334px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include desktop {
       margin-top: 72px;
       margin-bottom: 32px;
       width: 463px;
@@ -123,32 +163,110 @@
 
     color: var(--secondary-text-color);
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 334px;
       margin-bottom: 40px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include desktop {
       width: 463px;
 
       letter-spacing: 0.04em;
     }
   }
+
+  &__btn {
+    padding: 0px 37px;
+  }
 }
 
 .advantages-list {
-  padding-left: 20px;
   padding-right: 70px;
   padding-top: 66px;
   padding-bottom: 0;
+
+  @include tablet {
+    display: flex;
+    padding-left: 14px;
+    padding-top: 86px;
+  }
+
+  @include desktop {
+    padding-left: 0;
+    padding-top: 92px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--main-title-color);
+
+    @include tablet {
+      margin-bottom: 13px;
+      font-size: var(--big-title-size);
+      text-transform: lowercase;
+    }
+
+    @include desktop {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__content {
+    font-weight: 700;
+    font-size: var(--main-text-size);
+    line-height: 1.7;
+
+    @include tablet {
+      line-height: 1.74;
+    }
+
+    @include desktop {
+      line-height: 1.76;
+    }
+  }
 }
 
-.advantages-list_item {
+.advantages-list__item {
   position: relative;
+  max-width: 230px;
 
-  &:not(:last-child) {
-    margin-bottom: 98px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 98px;
+    }
   }
+
+  @include tablet {
+    max-width: 162px;
+    margin-bottom: 0;
+
+    &:nth-child(1) {
+      margin-right: 16px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 22px;
+    }
+  }
+
+  @include desktop {
+    max-width: 288px;
+
+    &:nth-child(1) {
+      margin-right: 142px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 106px;
+    }
+  }
+
   &:nth-child(1)::before {
     content: ' ';
     display: block;
@@ -160,6 +278,14 @@
     background-image: url(/images/adv-icon-1.png);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include tablet {
+      top: -86px;
+    }
+
+    @include desktop {
+      top: -90px;
+    }
   }
   &:nth-child(2)::before {
     content: ' ';
@@ -172,6 +298,14 @@
     background-image: url(/images/adv-icon-2.png);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include tablet {
+      top: -86px;
+    }
+
+    @include desktop {
+      top: -90px;
+    }
   }
   &:nth-child(3)::before {
     content: ' ';
@@ -184,21 +318,13 @@
     background-image: url(/images/adv-icon-3.png);
     background-repeat: no-repeat;
     background-size: cover;
-  }
-}
-.advantages-list_title {
-  margin-bottom: 20px;
-  font-family: 'Titan One';
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 1.14;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--main-title-color);
-}
 
-.advantages-list_content {
-  font-weight: 700;
-  font-size: var(--main-text-size);
-  line-height: 1.67;
+    @include tablet {
+      top: -86px;
+    }
+
+    @include desktop {
+      top: -90px;
+    }
+  }
 }
