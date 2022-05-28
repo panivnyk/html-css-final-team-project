@@ -1,7 +1,139 @@
 .advantages {
-  padding-top: 0px;
+  padding-top: 40px;
   padding-bottom: 80px;
+
   background-color: #fff5f6;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 60px;
+  }
+}
+
+.about-wrap {
+  margin-bottom: 40px;
+  &__pretitle {
+    margin-bottom: 15px;
+
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: var(--small-title-size);
+    line-height: 1.16;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--pretitle-color);
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: var(--big-title-size);
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: var(--main-title-color);
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 79px;
+    }
+  }
+
+  &__flex {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__img {
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: 767px) {
+      width: 336px;
+      margin-right: 32px;
+      margin-left: 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-right: 139px;
+      width: 501px;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 40px;
+
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: var(--main-text-size);
+    line-height: 1.6;
+    width: 220px;
+
+    color: var(--main-text-color);
+
+    @media screen and (max-width: 768px) {
+      max-width: 334px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 334px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 72px;
+      margin-bottom: 32px;
+      width: 463px;
+
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__secondary-text {
+    display: block;
+    margin-bottom: 20px;
+
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: var(--main-text-size);
+    line-height: 1.6;
+    width: 220px;
+
+    color: var(--secondary-text-color);
+
+    @media screen and (min-width: 768px) {
+      width: 334px;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 463px;
+
+      letter-spacing: 0.04em;
+    }
+  }
 }
 
 .advantages-list {
