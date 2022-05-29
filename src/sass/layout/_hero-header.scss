@@ -216,7 +216,10 @@
     position: relative;
     z-index: 2;
     text-align: right;
-    
+    display: none;
+    @include tablet {
+        display: block;
+    }  
 }
 
 .hero-numbers__number {
