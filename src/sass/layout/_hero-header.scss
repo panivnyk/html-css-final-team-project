@@ -70,6 +70,9 @@
     z-index: 1;
     &--open {
     fill: var(--main-title-color)}
+    @include desktop {
+        display: none;
+    }
 }
 
 .buy-btn--tab {
@@ -96,6 +99,9 @@
     }
     @include tablet {
         display: block;
+    }
+    @include desktop {
+        margin-left: auto;
     }
 }
 
