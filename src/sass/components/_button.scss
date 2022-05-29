@@ -1,35 +1,57 @@
 .btn {
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 44px;
 
   font-family: 'DM Sans';
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31; //21px
-  text-align: center;
-
   border: none;
   border-radius: 22px;
   background-color: inherit;
   cursor: pointer;
 
+  overflow: hidden;
+}
+
+.btn:hover {
   &::after {
-    content: '>';
-    width: 8px;
-    height: 8px;
-    margin-left: 13px;
+    margin-left: -10px;
+    transform: translateX(80px);
   }
+}
+
+.btn--accent::after,
+.btn--white::after {
+  content: '';
+  width: 7px;
+  height: 10px;
+  margin-left: 13px;
+
+  background-repeat: no-repeat;
+
+  transition: all 1s ease;
 }
 
 .btn--accent {
   color: var(--main-btn-text-color);
   background-color: var(--main-btn-color);
+
+  &::after {
+    background-image: url(../images/contacts/btnIcon-accent.svg);
+  }
 }
 
 .btn--white {
   color: var(--secondary-btn-text-color);
   background-color: var(--secondary-btn-color);
+
+  &::after {
+    background-image: url(../images/contacts/btnIcon-white.svg);
+  }
 }
 // mob-menu *********************************************
 // <button type="button" class="buy-btn btn btn-white">Buy now</button>   добавити ці класи
@@ -41,10 +63,6 @@
   &::after {
     margin-left: 20px;
   }
-
-  &:hover {
-    background-color: var(--secondary-btn-hover-color);
-  }
 }
 
 //  *********************************************
@@ -55,14 +73,15 @@
 
   &.btn--accent {
     background-color: #d41342;
-    &::after {
-      margin-left: 8px;
-      // display: none; // якщо непотрібно
 
-      @include tablet {
-        margin-left: 13px;
-      }
-    }
+    // &::after {
+    //   // margin-left: 8px;
+    //   // // display: none; // якщо непотрібно
+
+    //   // @include tablet {
+    //   //   margin-left: 13px;
+    //   // }
+    // }
   }
 
   @include tablet {
