@@ -22,12 +22,12 @@
   }
 }
 
-.btn-accent {
+.btn--accent {
   color: var(--main-btn-text-color);
   background-color: var(--main-btn-color);
 }
 
-.btn-white {
+.btn--white {
   color: var(--secondary-btn-text-color);
   background-color: var(--secondary-btn-color);
 }
@@ -53,7 +53,7 @@
 .contacts-btn {
   width: 161px;
 
-  &.btn-accent {
+  &.btn--accent {
     background-color: #d41342;
     &::after {
       margin-left: 8px;
