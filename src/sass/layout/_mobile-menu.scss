@@ -11,15 +11,17 @@
         overflow: auto;
         position: relative;
         padding: 0;
-        
-        // @media screen and (min-width: 320px) {
-        //     width: 320px;
-        // }
 
-        @media screen and (min-width: 480px) {
-            width: 480px;
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 254px;
+    }
         }
-
+    @media screen and (min-width: 768px) {
+        right: 0;
+        width: 254px;
     }
 }
 
@@ -96,4 +98,7 @@
 
 .no-scroll {
     overflow: hidden;
+}
+.none {
+    display: none;
 }
