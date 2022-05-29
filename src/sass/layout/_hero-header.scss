@@ -67,6 +67,7 @@
     display: block;
     cursor: pointer;
     margin-left: auto;
+    z-index: 1;
     &--open {
     fill: var(--main-title-color)}
 }

@@ -1,15 +1,19 @@
 <!-- Мобильное меню -->
-<div class="mob-menu">
+<div class="mob-menu is-hidden">
   <div class="container">
     <!-- Кнопка закрыть меню -->
     <button type="button" class="menu-close-btn">
      <svg width="14" height="14">
-            <use href=""></use>
+            <use href="./images/sprite.svg#icon-close-1"></use>
           </svg>
 
     </button>
     <!-- Кнопка купить -->
-    <button type="button" class="buy-btn">Buy now</button>
+    <button type="button" class="buy-btn">Buy now
+      <svg class="buy-btn__icon" width="5.26" height="8">
+            <use href="./images/sprite.svg#icon-Vector-1"></use>
+          </svg>
+    </button>
 
     <!-- Меню сайта -->
     <ul class="mob-menu-nav">
@@ -26,7 +30,7 @@
         <a class="mob-menu-nav__link" href="">Our products</a>
       </li>
       <li class="mob-menu-nav__item">
-        <a class="mob-menu-nav__link" href="">Contact</a>
+        <a class="mob-menu-nav__link" href="#contacts">Contact</a>
       </li>
     </ul>
   </div>
