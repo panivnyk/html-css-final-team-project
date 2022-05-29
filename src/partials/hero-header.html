@@ -1,31 +1,54 @@
-<header class="header">
-    <div class="container">
-        <a href="" class="header__logo" href="../index.html">
-            <img srcset="./images/logo.png 1x, ./images/logo-2x.png 2x" src="./images/logo.png" alt="Logo">
-        </a>
-        <button class="header__menu-btn">123
-            <!-- <img src="./images/burger.png" alt="123"> -->
-            <svg class="header__menu-btn--open" width="20" height="12">
-                <use href="./images/burger.svg"></use>
-            </svg>
-        </button>
+<div class="hero__background">
+    <div class="hero__overlay">
+        <header class="header">
+            <div class="container">
+                <a href="" class="header__logo" href="../index.html">
+                    <img srcset="./images/hero-header/logo.png 1x, ./images/hero-header/logo-2x.png 2x" src="./images/hero-header/logo.png" alt="Logo">
+                </a>
+                <button class="header__menu-btn">
+                    <svg class="header__menu-btn--open" width="20" height="12">
+                        <use href="./images/sprite.svg#burger"></use>
+                    </svg>
+                </button>
+                </button>
+                <button type="button" class="buy-btn--tab">Buy now</button>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <p class="hero__label">ice cream made with</p>
+                <h1 class="hero__title">passion</h1>
+                <ul class="hero-list">
+                    <li class="hero-list__item">
+                        <a href="" class="hero-list__link--products">Products</a>
+                    </li>
+                    <li class="hero-list__item">
+                        <a href="" class="hero-list__link--how-its-made">How it&#39;s made?</a>
+                    </li>
+                </ul>
+                <ul class="hero-info__list">
+                    <li class="hero-info__item"><p class="hero-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p></li>
+                    <li class="hero-info__item">
+                        <button type="button" class="hero-info__btn">
+                            <svg class="hero-info-icon" width="5" height="5">
+                                <use href="./images/sprite.svg#right-arrow"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="hero-numbers__list">
+                    <li class="hero-numbers__item">
+                        <p class="hero-numbers__number">16</p>
+                        <p class="hero-numbers__text">cafes</p>
+                        <div class="hero-numbers__circle"></div>
+                    </li>
+                    <li class="hero-numbers__item">
+                        <p class="hero-numbers__number">23</p>
+                        <p class="hero-numbers__text">food trucks</p>
+                        <div class="hero-numbers__circle"></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </div>
-</header>
-<section class="hero">
-    <div class="container">
-        <!-- <div class="hero__circle">
-            <img srcset="./images/hero-pic.png 1x, ./images/hero-pic-2x.png 2x" src="./images/hero-pic.png" alt="ice-cream"
-                class="hero-pic">
-        </div> -->
-        <p class="hero__label">ice cream made with</p>
-        <h1 class="hero__title">passion</h1>
-        <ul class="hero-list">
-            <li class="hero-list__item">
-                <a href="" class="hero-list__link--products">Products</a>
-            </li>
-            <li class="hero-list__item">
-                <a href="" class="hero-list__link--how-its-made">How it&#39;s made?</a>
-            </li>
-        </ul>
-    </div>
-</section>
+</div>

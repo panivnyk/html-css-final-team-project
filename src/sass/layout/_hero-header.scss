@@ -1,38 +1,63 @@
-.header {
-    background-color: var(--hero-bg-color);
-}
-
 .header .container {
-    background-color: var(--hero-bg-color);
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     padding-top: 8px;
-    @media screen and (min-width: 480px) {
+    @include mobile {
         width: 480px;
+    }
+    @include tablet {
+        width: 768px;
+        padding-top: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    @include desktop {
+        width: 1200px;
     }
 }
 
-.hero {
-    background-color: var(--hero-bg-color);
-}
-
 .hero .container {
-    background-color: var(--hero-bg-color);
+    position: relative;
     padding-top: 136px;
     padding-bottom: 158px;
-    overflow: hidden;
-    background-image: url(../images/hero-pic.png), url(../images/ellipse.png);
+    background-image: url(../images/hero-header/hero-pic-mob.png), url(../images/hero-header/ellipse-mob.png);
     background-size: 171px, 346px;
     background-repeat: no-repeat;
     background-position: top 34px left 117px, top 25px left 36px;
     @media screen and (min-width: 480px) {
-        width: 480px;
+            width: 480px;
     }
     @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            background-image: url(../images/hero-pic-2x.png), 
-                url(../images/ellipse.png);
+            background-image: url(../images/hero-header/hero-pic-mob-2x.png), 
+                url(../images/hero-header/ellipse-mob-2x.png);
+    }
+    @include tablet {
+        width: 768px;
+        padding: 20px 32px 56px 32px;
+        background-image: none;
+    }
+}
+
+.hero__background {
+    background-color: var(--hero-bg-color);
+    width: 100%;
+}
+
+.hero__overlay {
+    @include tablet {
+        width: 768px;
+        margin: auto;
+        background-image: url(../images/hero-header/bio-eco-tab.png), url(../images/hero-header/hero-pic-tab.png), url(../images/hero-header/tasty-tab.png), url(../images/hero-header/ellipse-tab.png);
+        background-repeat: no-repeat;
+        background-size: 152px, 143px, 190px, 335px;
+        background-position: bottom 16px left 32px, bottom 0 left 322px, bottom 0 right 32px, bottom 40px left 248px;
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/hero-header/bio-eco-tab-2x.png), url(../images/hero-header/hero-pic-tab-2x.png), url(../images/hero-header/tasty-tab-2x.png), url(../images/hero-header/ellipse-tab-2x.png);
+        }
     }
 }
 
@@ -41,8 +66,36 @@
     border: none;
     display: block;
     cursor: pointer;
+    margin-left: auto;
     &--open {
     fill: var(--main-title-color)}
+}
+
+.buy-btn--tab {
+    width: 160px;
+    height: 44px;
+    background-color: var(--secondary-btn-color);
+    border-radius: 22px;
+    border: none;
+    margin-left: 32px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--secondary-btn-text-color);
+    display: none;
+    cursor: pointer;
+    &::after {
+            content: '>';
+            margin-left: 12px;
+            width: 8px;
+            height: 8px;
+        }    
+    &:hover {
+        background-color: var(--secondary-btn-hover-color);
+    }
+    @include tablet {
+        display: block;
+    }
 }
 
 .hero__label {
@@ -54,7 +107,11 @@
     text-transform: uppercase;
     color: var(--secondary-title-color);
     width: 218px;
-    z-index: 5;
+    @include tablet {
+        font-size: 22px;
+        line-height: 1.14;
+        width: 162px;
+    }
 }
 
 .hero__title {
@@ -65,12 +122,15 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--main-title-color);
+    @include tablet {
+        font-size: 34px;
+        line-height: 0.9;
+    }
 }
 
 .hero-list {
     display: flex;
     margin-top: 20px;
-    z-index: 5;
 }
 
 .hero-list__link--products {
@@ -85,6 +145,10 @@
     align-items: center;
     justify-content: center;
     color: var(--main-btn-text-color);
+    cursor: pointer;
+    &:hover {
+        background-color: var(--main-btn-hover-color);
+    }
 }
 
 .hero-list__link--how-its-made {
@@ -100,24 +164,89 @@
     align-items: center;
     justify-content: center;
     color: var(--secondary-btn-text-color);
+    cursor: pointer;
+    &:hover {
+        background-color: var(--secondary-btn-hover-color);
+    }
 }
 
-// .hero__circle {
-//     position: absolute;
-//     top: 25px;
-//     left: 36px;
-//     display: block;
-    // width: 346px;
-    // height: 344px;
-    // border-radius: 50%;
-    // background-color: var(--pretitle-color);
-// }
+.hero-info__list {
+    display: none;
+    @include tablet {
+        display: block;
+        margin-left: 152px;
+        margin-top: 61px;
+        width: 114px;
+    }
+}
 
-// .hero-pic {
-//     position: absolute;
-//     top: 9px;
-//     left: 50%;
-//     transform: translateX(-50%);
-// }
+.hero-info__text {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.5;
+    color: var(--thirdly-text-color);
+}
 
+.hero-info__btn {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 7px;
+    background-color: var(--secondary-btn-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.hero-info-icon {
+    fill: var(--main-btn-color);
+}
+
+.hero-numbers__list {
+    position: absolute;
+    top: 10px;
+    right: 32px;
+}
+
+.hero-numbers__item {
+    margin-top: 16px;
+    position: relative;
+    z-index: 2;
+    text-align: right;
+    display: none;
+    @include tablet {
+        display: block;
+    }  
+}
+
+.hero-numbers__number {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    color: var(--main-title-color);
+}
+
+.hero-numbers__text {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    color: var(--thirdly-text-color);
+}
+.hero-numbers__circle {
+    position: absolute;
+    top: -2px;
+    left: 35px;
+    z-index: -1;
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+}
