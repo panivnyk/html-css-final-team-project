@@ -10,7 +10,7 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .footer {
         padding-top: 60px;
     }
@@ -29,7 +29,7 @@
     padding-top: 7px;
 }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .footer__title {
         padding-top: 0;
     }
@@ -54,7 +54,7 @@
         font-size: 26px;
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .footer__title--first-part {
         width: 474px;
         font-size: 30px;
@@ -76,7 +76,7 @@
         font-size: 48px;
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .footer__title--second-part {
         width: 474px;
         font-size: 58px;
@@ -103,7 +103,7 @@
     justify-content: right;
     margin-bottom: 40px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .social-network {
         padding-top: 5px;
     }
@@ -136,7 +136,7 @@
         }
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .social-network__item {
         &:not(:last-child) {
             margin-right: 25px;
@@ -210,7 +210,7 @@
     border-top: 1px solid rgba(225, 225, 225, 1);
     margin-top: 40px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .decor-line {
         margin-top: 60px;
     }
