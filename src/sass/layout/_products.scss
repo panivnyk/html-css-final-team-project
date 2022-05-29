@@ -10,21 +10,14 @@
     width: 100vw;
 }
 
-.products__container {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    @include mobile {
-        width: 480px;};
-    @include tablet {
-        width: 768px;
-        padding-left: 32px;
-        padding-right: 32px;}
-    @include desktop {
-        width: 1280px;
-        padding-left: 16px;
-        padding-right: 16px;}
-    }
+// .products__container {
+//     @include tablet {
+//         padding-left: 32px;
+//         padding-right: 32px;}
+//     @include desktop {
+//         padding-left: 16px;
+//         padding-right: 16px;}
+//     }
     
 
 .products__pretitle {
@@ -70,13 +63,16 @@
 .products-cards-list {
     display: block;
     @include tablet {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 -8px;}
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        padding-left: 4px;
+        padding-right: 4px;}
     @include desktop {
-    margin: 0 -16px;}
-    width: 100%;
+        margin: 0 -16px;
+        padding: 0;}
+    // width: 100%;
   }
 
 
@@ -87,9 +83,9 @@
     align-items: center;
     border-radius: 24px;
     margin-top: 140px;
-    width: 100%;
-    flex-basis: 489px;
-    min-height: 489px;
+    flex-basis: 100%;
+    // flex-basis: 489px;
+    height: 489px;
     padding-top: 160px;
     padding-bottom: 40px;
     @include tablet {
@@ -97,7 +93,7 @@
         margin-left: 8px;
         margin-right: 8px;
         flex-basis: calc((100% - 48px) / 3);
-        min-height: 473px;
+        height: 473px;
         padding-top: 118px;
         padding-bottom: 40px;}
     @include desktop {
@@ -105,18 +101,12 @@
         margin-left: 16px;
         margin-right: 16px;
         flex-basis: calc((100% - 96px) / 3);
-        min-height: 535px;
+        height: 535px;
         padding-top: 165px;
         padding-bottom: 60px;}
 
-
-    // &:not(:last-child) {
-    //     margin-bottom: 140px;}
-
-
-
     &:nth-child(1) {
-    background-color: #FFB8CA;};
+        background-color: #FFB8CA;};
     &:nth-child(2) {
         background-color: #F0D1A5;};
     &:nth-child(3) {
@@ -126,36 +116,81 @@
 
 .products-card:nth-child(1)::before {
     background-image: url(/images/img-products/prod-pic1-mob-1x.png);
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-            background-image: url(/images/img-products/prod-pic1-mob-2x.png);}}
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(/images/img-products/prod-pic1-mob-2x.png);}
+    @include tablet {
+        background-image: url(/images/img-products/prod-pic1-tab-1x.png);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(/images/img-products/prod-pic1-tab-2x.png);};}
+    @include desktop {
+        background-image: url(/images/img-products/prod-pic1-desk-1x.png);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(/images/img-products/prod-pic1-desk-2x.png);};}        
+        }
+
 .products-card:nth-child(2)::before {
     background-image: url(/images/img-products/prod-pic2-mob-1x.png);
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-            background-image: url(/images/img-products/prod-pic2-mob-2x.png);}}
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(/images/img-products/prod-pic2-mob-2x.png);}
+    @include tablet {
+        background-image: url(/images/img-products/prod-pic2-tab-1x.png);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(/images/img-products/prod-pic2-tab-2x.png);};}
+    @include desktop {
+        background-image: url(/images/img-products/prod-pic2-desk-1x.png);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(/images/img-products/prod-pic2-desk-2x.png);};}        
+        }
 
 .products-card:nth-child(3)::before {
-     background-image: url(/images/img-products/prod-pic3-mob-1x.png); 
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-            background-image: url(/images/img-products/prod-pic3-mob-2x.png);}}
+        background-image: url(/images/img-products/prod-pic3-mob-1x.png);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(/images/img-products/prod-pic3-mob-2x.png);}
+    @include tablet {
+        background-image: url(/images/img-products/prod-pic3-tab-1x.png);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(/images/img-products/prod-pic3-tab-2x.png);};}
+    @include desktop {
+        background-image: url(/images/img-products/prod-pic3-desk-1x.png);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(/images/img-products/prod-pic3-desk-2x.png);};}        
+        }
 
 .products-card::before {
     content: '';
     display: block;
     position: absolute;
-    left: 50%;
-    top: -140px;
-    background-repeat: no-repeat;
-    width: 280px;
-    height: 280px;
     background-repeat: no-repeat;
     background-size: contain;
-    transform: translateX(-50%);
+    width: 280px;
+    height: 280px;
+    top: -140px;
+    @include tablet {
+        width: 224px;
+        height: 224px;
+        top: -138px;}
+    @include desktop {
+        width: 394px;
+        height: 394px;
+        top: -261px;}
     }
 
 
@@ -197,14 +232,17 @@
     display: flex;
     margin-left: 40px;
     margin-right: 40px;
-    font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.52;
     @include tablet {
+        margin-left: 32px;
+        margin-right: 32px;
         line-height: 1.76;}
     @include desktop {
+        margin-left: 75px;
+        margin-right: 75px;
         font-size: 16px;}
     text-align: center;
     letter-spacing: 0.04em;
@@ -218,8 +256,7 @@
     margin-top: auto;
     margin-bottom: 0;
     text-align: center;
-    // width: 40px;
-    // height: 40px;
+   
     }
 
 .arrow-pic {
