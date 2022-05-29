@@ -1,25 +1,51 @@
 .contacts {
-  padding-top: 48px;
-  padding-bottom: 48px;
-  background: linear-gradient(0deg, var(--main-bg-color) 74%, var(--secondary-bg-color) 74%);
-}
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: linear-gradient(0deg, var(--main-bg-color) 75%, var(--secondary-bg-color) 75%);
 
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    background: linear-gradient(0deg, var(--main-bg-color) 77%, var(--secondary-bg-color) 77%);
+  }
+}
+.contact-wrapper {
+  @include desktop {
+    background-image: url(../images/contacts/sectionbg21.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 85px;
+  }
+}
 .contacts__list {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+
+  @include tablet {
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 32px;
+  }
 }
 
 .contacts__item {
+  padding: 40px 32px;
+
   background-color: var(--secondary-bg-color);
   border-radius: 24px;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  @include tablet {
+    flex-basis: calc((100% - 64px) / 3);
+  }
 }
 
 .representation {
   font-style: normal;
   font-weight: 500;
-  padding: 40px 32px;
+  font-size: 12px;
 }
 
 .representation__name {
@@ -39,6 +65,13 @@
   .contacts__item:nth-child(2) & {
     background: #c2e297;
   }
+
+  @include tablet {
+    padding: 0 18px;
+
+    font-size: 16px;
+    line-height: 1.87;
+  }
 }
 
 .representation-city__name {
@@ -49,6 +82,11 @@
   letter-spacing: 0.04em;
 
   color: var(--main-text-color);
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.85;
+  }
 }
 .representation-city__address {
   max-width: 185px;
@@ -57,6 +95,16 @@
   line-height: 1.5;
 
   color: var(--secondary-text-color);
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--secondary-btn-text-color);
+  }
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.85;
+  }
 }
 .representation-city,
 .representation-works {
@@ -73,6 +121,10 @@
   line-height: 1.83;
 
   color: var(--main-text-color);
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.85;
+  }
 }
 .representation-works__hours {
   font-weight: 500;
@@ -84,6 +136,11 @@
   &:not(:last-child) {
     margin-bottom: 8px;
   }
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.85;
+  }
 }
 
 .representation-links {
@@ -92,15 +149,33 @@
   padding-top: 24px;
 
   & a {
-    font-weight: 500;
     font-size: 12px;
     line-height: 1.5;
 
     color: var(--secondary-text-color);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--secondary-btn-text-color);
+    }
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.85;
+    }
   }
 }
 .contacts-buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
   margin-top: 32px;
+
+  @include tablet {
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 14px;
+    margin-top: 40px;
+  }
 }
-
-
