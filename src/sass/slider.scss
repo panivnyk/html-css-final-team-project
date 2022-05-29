@@ -1,6 +1,13 @@
 .customer-reviews-container{
     margin: 40px auto;
     max-width: 480px;
+    @media screen and (min-width: 768px) {
+        padding: 0;
+            max-width: 768px;
+        }
+                @media screen and (min-width: 1280px){
+                    max-width: 1280px;
+                }
 }
 .swiper {
     max-width: 100%;
@@ -18,14 +25,36 @@
                 @media screen and (min-width: 423px) {
                     height: 405px;
                 }
+                    @media screen and (min-width: 768px) {
+                        height: 390px;
+                    }
+                        @media screen and (min-width: 1280px){
+                           height: 360px;  
+                        }
 }
 .text-wrapper{
+    margin: 0 auto;
     padding: 30px 50px 25px;
     background-color: #FAFAFA;
+    @media screen and (min-width: 768px) {
+            padding: 37px 6px 32px;
+            max-width: 620px;
+        }
+                @media screen and (min-width: 1280px){
+                   box-sizing: border-box; 
+                   max-width: 1034px; 
+                   padding: 47px 106px 26px;
+                }
 }
 .slider-img{
     display: block;
     margin: 0 auto 32px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 20px;
+    }
+        @media screen and (min-width: 1280px){
+            margin-bottom: 16px;
+        }
 }
 .slider-text{
     position: relative;
@@ -38,6 +67,17 @@
     color: var(--main-text-color);
     background: repeating-linear-gradient(#FAFAFA 0px, #FAFAFA 30px, #E1E1E1 31px);
     z-index: 1;
+    @media screen and (min-width: 768px) {
+        padding: 0px 30px 5px;
+        font-size: 14px;
+        line-height: 2.16;
+        letter-spacing: 0.04em;
+        }
+                @media screen and (min-width: 1280px) {
+                    font-size: 16px;
+                    line-height: 1.86;
+                    padding: 0px 35px 5px;
+                }
 }
 .slider-text:before{
     content: '';
@@ -58,6 +98,12 @@
     font-size: 14px;
     line-height: 1.86;
     text-align: center;
+    @media screen and (min-width: 768px){
+        font-size: 16px;
+    }
+        @media screen and (min-width: 1280px){
+            font-size: 20px;
+        }
 }
 .signature::before{
     content: '';
