@@ -1,5 +1,4 @@
 .btn {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,39 +8,45 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31; //21px
+
+  background-color: inherit;
   border: none;
   border-radius: 22px;
-  background-color: inherit;
+
+  transition-duration: var(--time-transition);
+  transition-timing-function: var(--typical-cubic);
+
   cursor: pointer;
 
   overflow: hidden;
-}
 
-.btn:hover {
-  &::after {
-    margin-left: -10px;
-    transform: translateX(80px);
+  &:hover {
+    .btn__icon {
+      margin-left: -7px;
+      transform: translateX(80px);
+
+      transition: all 0.6s ease;
+    }
   }
 }
 
-.btn--accent::after,
-.btn--white::after {
-  content: '';
-  width: 7px;
-  height: 10px;
+.btn__icon {
   margin-left: 13px;
 
-  background-repeat: no-repeat;
-
-  transition: all 1s ease;
+  stroke: var(--main-btn-hover-color);
+  transition: all 0.6s ease;
 }
 
 .btn--accent {
   color: var(--main-btn-text-color);
   background-color: var(--main-btn-color);
 
-  &::after {
-    background-image: url(../images/contacts/btnIcon-accent.svg);
+  .btn__icon {
+    stroke: var(--secondary-btn-color);
+  }
+
+  &:hover {
+    background-color: var(--main-btn-hover-color);
   }
 }
 
@@ -49,11 +54,18 @@
   color: var(--secondary-btn-text-color);
   background-color: var(--secondary-btn-color);
 
-  &::after {
-    background-image: url(../images/contacts/btnIcon-white.svg);
+  &:hover {
+    background-color: var(--secondary-btn-hover-color);
   }
 }
-// mob-menu *********************************************
+
+// HEADER ***********************************************
+
+
+// HEADER ***********************************************
+
+
+// MOB-MENU *********************************************
 // <button type="button" class="buy-btn btn btn-white">Buy now</button>   добавити ці класи
 
 .buy-btn {
@@ -67,24 +79,39 @@
 
 //  *********************************************
 
-// contacts *********************************************
+// CONTACTS *********************************************
 .contacts-btn {
   width: 161px;
 
   &.btn--accent {
+    .btn__icon {
+      // margin-left: 8px;
+      // display: none; // якщо непотрібно
+    }
     background-color: #d41342;
-
-    // &::after {
-    //   // margin-left: 8px;
-    //   // // display: none; // якщо непотрібно
-
-    //   // @include tablet {
-    //   //   margin-left: 13px;
-    //   // }
-    // }
+    @include tablet {
+      width: 191px;
+    }
+    @include desktop {
+      width: 198px;
+    }
   }
 
+  &.btn--white {
+    @include tablet {
+      width: 174px;
+    }
+    @include desktop {
+      width: 180px;
+    }
+  }
   @include tablet {
     width: 198px;
   }
 }
+
+
+// !!!!!!!!!!!  додати спрайт до свої кнопки!!!!
+// <svg class="btn__icon" width="7" height="10">
+//   <use href="./images/sprite.svg#icon-Vector-1"></use>
+// </svg>
