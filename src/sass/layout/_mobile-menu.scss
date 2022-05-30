@@ -1,20 +1,35 @@
 .mob-menu {
-    height: 100vh;
-    background-color: var(--modal-menu-bg-color);
-}
-.mob-menu .container {
-    height: 100%;
-    overflow: auto;
-    position: relative;
     
-    @media screen and (min-width: 320px) {
-            width: 320px;;
-        }
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 5;
+    background-color: var(--modal-menu-bg-color);
+    .container {
+        height: 100%;
+        overflow: auto;
+        position: relative;
+        padding: 0;
+
     @media screen and (min-width: 480px) {
         width: 480px;
     }
-
+    @media screen and (min-width: 768px) {
+        width: 254px;
+    }
+        }
+    @media screen and (min-width: 768px) {
+        right: 0;
+        width: 254px;
+    }
+    
 }
+.animate__animated.animate__fadeInRightBig {
+    --animate-duration: 2s;
+}
+
+
 
 .menu-close-btn {
     position: absolute;
@@ -27,7 +42,7 @@
     right: 20px;
     cursor: pointer;
 
-    outline: 1px solid white;
+    // outline: 1px solid white;
 }
 
 .buy-btn {
@@ -48,23 +63,20 @@
     color: #D41443;
     cursor: pointer;
 
-    &::after {
-        content: '>';
-        margin-left: 20px;
-        width: 8px;
-        height: 8px;
-        // outline: 1px solid tomato;
-    }
     &:hover {
         background-color: #ECEBEB;
     }
+}
+
+.buy-btn__icon {
+    margin-left: 20px;
 }
 
 .mob-menu-nav {
     margin: 19px -20px 19px -20px;
 }
 .mob-menu-nav__link {
-    margin-left: 20px;
+    margin-left: 40px;
     text-decoration: none;
     color: #FFFFFF;
     font-family: 'DM Sans';
@@ -87,4 +99,8 @@
         color: #D41443;
     }
     
+}
+
+.no-scroll {
+    overflow: hidden;
 }
