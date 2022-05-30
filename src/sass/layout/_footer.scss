@@ -79,8 +79,6 @@
     }
 }
 
-
-
 .social-network {
     list-style: none;
     display: flex;
@@ -96,9 +94,6 @@
     width: 32px;
     border-radius: 50%;
     background: rgba(254, 165, 187, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     &:hover {
     background: rgba(212, 20, 67, 1);
     }
@@ -120,13 +115,20 @@
     }
 }
 
-.social-network__icon:focus .social-network__link {
-    background: rgba(212, 20, 67, 1);
+.social-network__link {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:focus {
+        background-color: rgba(212, 20, 67, 1);
+    }
 }
 
 .social-network__icon {
     fill:rgba(255, 255, 255, 1);
-    margin-top: 3px;
 }
 
 .social-network__icon--tel {
