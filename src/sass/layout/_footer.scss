@@ -2,34 +2,27 @@
     background-color: rgba(255, 245, 246, 1);
     width: 100%;
     padding-top: 24px;
-}
-
-@media screen and (min-width: 768px) {
-    .footer {
+    @include tablet {
         padding-top: 20px;
     }
-}
-
-@media screen and (min-width: 1280px) {
-    .footer {
+    @include desktop {
         padding-top: 60px;
     }
 }
 
-@media screen and (min-width: 768px) {
+@include tablet {
     .footer__container {
         display: flex;
         flex-wrap: wrap;
-       
-        //center align-items: baseline;
     }
 }
-@media screen and (min-width: 768px) {
+
+@include tablet {
     .footer__title {
     padding-top: 7px;
 }
 }
-@media screen and (min-width: 1280px) {
+@include desktop {
     .footer__title {
         padding-top: 0;
     }
@@ -46,20 +39,16 @@
     text-align: left;
     text-transform: uppercase;
     color: rgba(255, 165, 186, 1);
-
-}
-@media screen and (min-width: 768px) {
-    .footer__title--first-part {
+    @include tablet {
         width: 320px;
         font-size: 26px;
     }
-}
-@media screen and (min-width: 1280px) {
-    .footer__title--first-part {
+    @include desktop {
         width: 474px;
         font-size: 30px;
     }
 }
+
 .footer__title--second-part {
     width: 200px;
     font-family: Titan One;
@@ -70,41 +59,34 @@
     text-align: left;
     text-transform: uppercase;
     color: rgba(212, 20, 67, 1);
-}
-@media screen and (min-width: 768px) {
-    .footer__title--second-part {
+    @include tablet {
         font-size: 48px;
     }
-}
-@media screen and (min-width: 1280px) {
-    .footer__title--second-part {
+    @include desktop {
         width: 474px;
         font-size: 58px;
     }
 }
+
 .footer__contack-blok {
     margin-bottom: 40px;
     margin-top: 40px;
-}
-
-@media screen and (min-width: 768px) {
-    .footer__contack-blok {
+    @include tablet {
         width: 268px;
         margin-left: auto;
         margin-bottom: 0;
         margin-top: 0;
-        
     }
 }
+
+
 
 .social-network {
     list-style: none;
     display: flex;
     justify-content: right;
     margin-bottom: 40px;
-}
-@media screen and (min-width: 1280px) {
-    .social-network {
+    @include desktop {
         padding-top: 5px;
     }
 }
@@ -117,39 +99,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.social-network__item:hover {
+    &:hover {
     background: rgba(212, 20, 67, 1);
-}
-.social-network__icon:focus .social-network__link {
-    background: rgba(212, 20, 67, 1);
-}
+    }
+    &:not(:last-child) {
+    margin-right: 28px;
+    }
 
-@media screen and (min-width: 768px) {
-    .social-network__item {
+    @include tablet {
         width: 34px;
         height: 34px;
-
         &:not(:last-child) {
             margin-right: 30px;
         }
     }
-}
-@media screen and (min-width: 1280px) {
-    .social-network__item {
+    @include desktop {
         &:not(:last-child) {
             margin-right: 25px;
         }
     }
 }
 
-.social-network__item:not(:last-child) {
-    margin-right: 28px;
+.social-network__icon:focus .social-network__link {
+    background: rgba(212, 20, 67, 1);
 }
+
 .social-network__icon {
     fill:rgba(255, 255, 255, 1);
-    
+    margin-top: 3px;
+}
+
+.social-network__icon--tel {
+    margin-right: 1px;
 }
 
 .contact__text {
@@ -160,10 +141,7 @@
     line-height: 1.83;
     letter-spacing: 0em;
     text-align: right;
-}
-
-@media screen and (min-width: 768px) {
-    .contact__text {
+    @include tablet{
         font-size: 14px;
     }
 }
@@ -177,18 +155,21 @@
     letter-spacing: 0em;
     text-align: right;
     color: rgba(212, 20, 67, 1);
-}
-
-
-@media screen and (min-width: 768px) {
-    .contact__link {
+    @include tablet {
         font-size: 14px;
     }
 }
 
+.contact__copyright-blok {
+    padding-top: 16px;
+    padding-bottom: 20px;
+    @include tablet {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
 .contact__copyright {
-    margin-top: 16px;
-    margin-bottom: 20px;
     color: rgba(144, 126, 130, 1);
     font-family: DM Sans;
     font-style: normal;
@@ -199,19 +180,10 @@
     text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-    .contact__copyright {
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-}
-
 .decor-line {
     border-top: 1px solid rgba(225, 225, 225, 1);
     margin-top: 40px;
-}
-@media screen and (min-width: 1280px) {
-    .decor-line {
+    @include desktop {
         margin-top: 60px;
     }
 }
