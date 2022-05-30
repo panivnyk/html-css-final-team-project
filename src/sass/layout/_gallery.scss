@@ -1,6 +1,7 @@
 .gallery {
-  background: linear-gradient(to top, var(--color-design-white) 60%, var(--bg-section) 60%);
+  background: linear-gradient(to top, var(--secondary-bg-color) 60%, var(--main-bg-color) 60%);
 }
+
 /* ---- grid ---- */
 
 .grid {
@@ -28,7 +29,7 @@
   float: left;
   border-radius: 16px;
   z-index: 0;
-  transition: all ease 500ms;
+  transition: all ease 250ms;
 }
 .grid__image {
 }
