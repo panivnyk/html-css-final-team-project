@@ -1,0 +1,224 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: scroll;
+    z-index: 10;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 98vh;
+    // min-height: 581px;
+    overflow: auto;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    @include mobile {
+        width: 450px;
+    }
+
+    @include desktop {
+        width: 528px;
+    }
+}
+
+.button-backdrop-close {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 8px 0 0;
+    padding: 0;
+    cursor: pointer;
+    background: #FFA5BA;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    &:hover {
+        background: #D41443;
+    }
+}
+
+
+.modal-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.07em;
+    margin-bottom: 12px;
+    color: #D41443;
+    font-family: 'Titan One';
+
+    @include desktop {
+        line-height: 1.15;
+    }
+}
+
+.form-field {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+.form-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color:#FFA5BA;
+    margin-bottom: 4px;
+}
+
+.form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 11px 42px;
+
+    &:hover,
+    &:focus {
+        border: 1px solid #FFA5BA;
+        outline: none;
+    }
+}
+
+.form-text {
+    resize: none;
+    width: 100%;
+    height: 80px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:hover,
+    &:focus {
+        border: 1px solid #FFA5BA;
+        outline: none;
+    }
+}
+
+.input-box {
+    position: relative;
+}
+
+.modal-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #757575;
+    .form-input:hover+&,
+    .form-input:focus+& {
+        fill: #FFA5BA;
+    }
+}
+
+// ============ Checkbox modal ============
+.checkbox-field {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.modal-check {
+    width: 16px;
+    height: 15px;
+    border: 1px solid #D41443;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+}
+
+.checkbox-label {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: #D41443;
+
+    a {
+        color: blue;
+    }
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+}
+
+.check-icon {
+    fill: transparent;
+
+    .checkbox-input:checked+.checkbox-label & {
+        fill: white;
+    }
+}
+
+.checkbox-input:checked+.checkbox-label span {
+    background-color: red;
+    border: 1px solid transparent;
+}
+
+.button-field {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-button {
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    background: #D41443;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 22px;
+    color: white;
+    margin-top: 20px;
+    border: 2px solid #D41443;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: #b9103a;
+    }
+}

@@ -1,0 +1,67 @@
+<!------------- backdrop ------------->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="button-backdrop-close" data-modal-close>
+          <svg class="" width="18" height="18">
+            <use href="./images/sprite.svg#icon-close-1"></use>
+          </svg>
+        </button>
+
+        <p class="modal-title">Please enter your details</p>
+        <form class="">
+          <div class="modal-inputs">
+            <div class="form-field">
+              <label class="form-label" for="name"> Name</label>
+              <div class="input-box">
+                <input class="form-input" type="text" name="name" id="name" />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-person-black-18dp-1"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="tel"> Phone</label>
+              <div class="input-box">
+                <input class="form-input" type="tel" name="tel" id="tel" />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-phone-black-18dp-1"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="comment">Comment</label>
+              <textarea
+                class="form-text"
+                name="comment"
+                id="comment"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="checkbox-field">
+            <input
+              class="checkbox-input visually-hidden"
+              type="checkbox"
+              name="policy"
+              id="policy"
+            />
+            <label class="checkbox-label" for="policy">
+              <span class="modal-check">
+                <svg class="check-icon" width="16" height="15">
+                  <use href="./images/sprite.svg#icon-Vector"></use>
+                </svg>
+              </span>
+              I agree to the newsletter and accept the &nbsp;
+              <a href="">Terms and Conditions</a>
+            </label>
+          </div>
+
+          <div class="button-field">
+            <button class="modal-button" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
