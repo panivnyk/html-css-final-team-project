@@ -3,6 +3,12 @@
   padding-bottom: 40px;
   background: linear-gradient(0deg, var(--main-bg-color) 75%, var(--secondary-bg-color) 75%);
 
+  & .container {
+    @include tablet {
+      padding: 0 16px;
+    }
+  }
+
   @include tablet {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -40,6 +46,9 @@
   @include tablet {
     flex-basis: calc((100% - 64px) / 3);
   }
+  @include desktop {
+    padding: 40px 40px;
+  }
 }
 
 .representation {
@@ -68,6 +77,7 @@
 
   @include tablet {
     padding: 0 18px;
+    margin-bottom: 32px;
 
     font-size: 16px;
     line-height: 1.87;
@@ -86,33 +96,52 @@
   @include tablet {
     font-size: 14px;
     line-height: 1.85;
+    margin-bottom: 12px;
   }
 }
 .representation-city__address {
-  max-width: 185px;
-
+  max-width: 179px;
+  display: block;
+  
   font-size: 12px;
   line-height: 1.5;
 
   color: var(--secondary-text-color);
-  transition: color 0.2s ease-in-out;
+
+  transition-property: color;
+  transition-duration: var(--time-transition);
+  transition-timing-function: var(--typical-cubic);
 
   &:hover {
     color: var(--secondary-btn-text-color);
   }
 
   @include tablet {
+  max-width: 159px;
+
     font-size: 14px;
     line-height: 1.85;
+  }
+  @include desktop {
+    max-width: 243px;
   }
 }
 .representation-city,
 .representation-works {
   padding-bottom: 24px;
   border-bottom: 1px solid #e1e1e1;
+
+  @include tablet {
+    padding-bottom: 32px;
+  }
 }
-.representation-works {
+.representation-works,
+.representation-links {
   padding-top: 24px;
+
+  @include tablet {
+    padding-top: 32px;
+  }
 }
 
 .representation-works__day {
@@ -135,6 +164,9 @@
 
   &:not(:last-child) {
     margin-bottom: 8px;
+    @include tablet {
+      margin-bottom: 12px;
+    }
   }
 
   @include tablet {
@@ -144,16 +176,19 @@
 }
 
 .representation-links {
+  max-width: 130px;
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
 
   & a {
     font-size: 12px;
     line-height: 1.5;
 
     color: var(--secondary-text-color);
-    transition: color 0.2s ease-in-out;
+
+    transition-property: color;
+    transition-duration: var(--time-transition);
+    transition-timing-function: var(--typical-cubic);
 
     &:hover {
       color: var(--secondary-btn-text-color);
@@ -165,6 +200,9 @@
     }
   }
 }
+
+// CONTACTS-BUTTONS **********************************
+
 .contacts-buttons {
   display: flex;
   align-items: center;
