@@ -15,21 +15,9 @@
   refs.clickBtnBuy.addEventListener("click", toggleMenu);
   refs.clickMenuItem.addEventListener("click", toggleMenu);
   function toggleMenu() {
-    refs.menu.classList.toggle("is-hidden");
+    refs.menu.classList.toggle("mob-menu__animate");
     refs.body.classList.toggle("no-scroll");
     refs.btn_menu.classList.toggle("is-hidden");
     refs.btn_buy.classList.toggle("is-hidden");
   }
 })();
-
-// (() => {
-//   const refs = {
-//     clickMobMenu: document.querySelector(".buy-btn"),
-//     mMenu: document.querySelector(".mob-menu"),
-    
-//   };
-//   refs.clickMobMenu.addEventListener("click", toggleMenu);
-//   function toggleMenu() {
-//     refs.mMenu.classList.toggle("is-hidden");
-//   }
-// })();
