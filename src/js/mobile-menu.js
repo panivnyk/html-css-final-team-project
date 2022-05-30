@@ -5,7 +5,7 @@
     menu: document.querySelector(".mob-menu"),
     body: document.querySelector(".body"),
     btn_menu: document.querySelector(".header__menu-btn"),
-    btn_buy: document.querySelector(".buy-btn--tab"),
+    btn_buy: document.querySelector(".buy-btn--tab-dt"),
   };
   refs.openMenuBtn.addEventListener("click", toggleMenu);
   refs.closeMenuBtn.addEventListener("click", toggleMenu);
