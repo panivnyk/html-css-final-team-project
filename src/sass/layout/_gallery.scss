@@ -1,3 +1,9 @@
+.gallery-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
 .gallery-wrapper {
   display: flex;
   justify-content: center;
@@ -29,7 +35,12 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+  transition: all 0.5s ease;
   position: relative;
+}
+.gallery-wrapper-list:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .gallery-wrapper-four {
