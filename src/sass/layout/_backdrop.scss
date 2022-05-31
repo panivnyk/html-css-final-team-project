@@ -161,6 +161,7 @@
     justify-content: space-between;
 }
 .checkbox-prodacts__item {
+    box-sizing: border-box;
     width: calc(100% / 3 - 5px);;
     padding: 8px;
     background-color: #FFB8CA;
@@ -168,6 +169,7 @@
     &:not(:last-child) {
         margin-right: 5px;
     }
+    border: 2px solid #FFB8CA;
     &:hover {
         border: 2px solid #D41443;
     }
