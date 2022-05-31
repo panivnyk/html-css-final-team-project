@@ -1,3 +1,4 @@
+
 .gallery-img {
   display: block;
   max-width: 100%;
@@ -16,8 +17,10 @@
   justify-content: center;
   padding-bottom: 123px;
   position: relative;
+}
 
-  & img:not(:last-child) {
+  & img:not(:last-child) 
+  {
     margin-bottom: 8px;
   }
 
@@ -66,4 +69,3 @@
     width: auto;
     height: 100%;
   }
-}
