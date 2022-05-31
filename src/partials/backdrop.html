@@ -8,8 +8,47 @@
           </svg>
         </button>
 
-        <p class="modal-title">Please enter your details</p>
+        <p class="modal-title">Choose a product</p>
         <form class="">
+
+            <div class="checkbox-prodacts">
+                <ul class="checkbox-prodacts__list">
+                  <li class="checkbox-prodacts__item">
+                      <input 
+              class="checkbox-prodacts__input"
+              type="checkbox"
+              name="ice-cream"
+              id="ice-cream"
+            />
+            <label class="checkbox-prodacts__label" 
+            for="ice-cream"><br>ice cream <br>(1.25$)</label>
+                  </li>
+
+                  <li class="checkbox-prodacts__item">
+                      <input 
+              class="checkbox-prodacts__input"
+              type="checkbox"
+              name="ice-coffee"
+              id="ice-coffee"
+            />
+            <label class="checkbox-prodacts__label" 
+            for="ice-coffee"><br>ice coffee <br>(1.1$)</label>
+                  </li>
+
+                  <li class="checkbox-prodacts__item">
+                      <input 
+              class="checkbox-prodacts__input"
+              type="checkbox"
+              name="milkshakes"
+              id="milkshakes"
+            />
+            <label class="checkbox-prodacts__label" 
+            for="milkshakes"><br>milkshakes <br>(1.2$)</label>
+                  </li>
+              </ul>
+              
+          </div>
+
           <div class="modal-inputs">
             <div class="form-field">
               <label class="form-label" for="name"> Name</label>
@@ -32,17 +71,18 @@
             </div>
 
             <div class="form-field">
-              <label class="form-label" for="comment">Comment</label>
+              <label class="form-label" for="address">Address</label>
               <textarea
                 class="form-text"
-                name="comment"
-                id="comment"
+                name="address"
+                id="address"
                 placeholder="Введите текст"
               ></textarea>
             </div>
           </div>
           
 
+          
           <div class="checkbox-field">
             <input
               class="checkbox-input visually-hidden"
