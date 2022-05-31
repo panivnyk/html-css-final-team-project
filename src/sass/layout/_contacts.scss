@@ -22,7 +22,7 @@
     background-image: url(../images/contacts/sectionbg21.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position-y: 85px;
+    background-position-y: 140px;
   }
 }
 .contacts__list {
@@ -49,12 +49,6 @@
   @include desktop {
     padding: 40px 40px;
   }
-}
-
-.representation {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
 }
 
 .representation__name {
@@ -86,24 +80,19 @@
 
 .representation-city__name {
   margin-bottom: 8px;
-  font-size: 12px;
-  line-height: 1.83;
 
   letter-spacing: 0.04em;
 
   color: var(--main-text-color);
 
   @include tablet {
-    font-size: 14px;
-    line-height: 1.85;
     margin-bottom: 12px;
   }
 }
 .representation-city__address {
   max-width: 179px;
   display: block;
-  
-  font-size: 12px;
+
   line-height: 1.5;
 
   color: var(--secondary-text-color);
@@ -117,10 +106,7 @@
   }
 
   @include tablet {
-  max-width: 159px;
-
-    font-size: 14px;
-    line-height: 1.85;
+    max-width: 159px;
   }
   @include desktop {
     max-width: 243px;
@@ -145,21 +131,9 @@
 }
 
 .representation-works__day {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.83;
-
   color: var(--main-text-color);
-  @include tablet {
-    font-size: 14px;
-    line-height: 1.85;
-  }
 }
 .representation-works__hours {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.83;
-
   color: var(--pretitle-color);
 
   &:not(:last-child) {
@@ -167,11 +141,6 @@
     @include tablet {
       margin-bottom: 12px;
     }
-  }
-
-  @include tablet {
-    font-size: 14px;
-    line-height: 1.85;
   }
 }
 
@@ -181,8 +150,7 @@
   flex-direction: column;
 
   & a {
-    font-size: 12px;
-    line-height: 1.5;
+    line-height: 1.3;
 
     color: var(--secondary-text-color);
 
@@ -193,16 +161,24 @@
     &:hover {
       color: var(--secondary-btn-text-color);
     }
-
-    @include tablet {
-      font-size: 14px;
-      line-height: 1.85;
-    }
   }
 }
 
-// CONTACTS-BUTTONS **********************************
+.representation-city__name,
+.representation-city__address,
+.representation-works__day,
+.representation-works__hours,
+.representation-links a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8;
 
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+}
+// CONTACTS-BUTTONS **********************************
 .contacts-buttons {
   display: flex;
   align-items: center;
@@ -215,5 +191,8 @@
     flex-direction: row;
     column-gap: 14px;
     margin-top: 40px;
+  }
+  @include desktop {
+    margin-top: 60px;
   }
 }
