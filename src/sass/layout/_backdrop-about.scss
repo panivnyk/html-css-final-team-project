@@ -22,6 +22,18 @@
   fill: var(--secondary-btn-text-color);
 }
 
-.button-backdrop-close {
-  background-color: var(--secondary-btn-text-color);
+// .button-backdrop-close {
+//   background-color: var(--secondary-btn-text-color);
+// }
+
+.button-about {
+  margin-top: auto;
+}
+
+.modal-title__about {
+  font-weight: normal;
+}
+
+.form-text__about {
+  height: 70px;
 }
