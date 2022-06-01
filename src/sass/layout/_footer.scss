@@ -10,21 +10,13 @@
     }
 }
 
-@include tablet {
-    .footer__container {
+.footer__container {
+    padding-bottom: 40px;
+    @include tablet {
         display: flex;
-        flex-wrap: wrap;
     }
-}
-
-@include tablet {
-    .footer__title {
-    padding-top: 7px;
-}
-}
-@include desktop {
-    .footer__title {
-        padding-top: 0;
+    @include desktop {
+        padding-bottom: 60px;
     }
 }
 
@@ -61,6 +53,7 @@
     color: rgba(212, 20, 67, 1);
     @include tablet {
         font-size: 48px;
+        width: 340px;
     }
     @include desktop {
         width: 474px;
@@ -69,13 +62,15 @@
 }
 
 .footer__contack-blok {
-    margin-bottom: 40px;
     margin-top: 40px;
     @include tablet {
         width: 268px;
         margin-left: auto;
         margin-bottom: 0;
         margin-top: 0;
+    }
+    @include desktop {
+        padding-top: 10px;
     }
 }
 
@@ -84,9 +79,7 @@
     display: flex;
     justify-content: right;
     margin-bottom: 40px;
-    @include desktop {
-        padding-top: 5px;
-    }
+    
 }
 
 .social-network__item {
@@ -117,8 +110,7 @@
 
 .social-network__link {
     height: 32px;
-    //width: 32px;
-    //border-radius: 50%;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,8 +176,4 @@
 
 .decor-line {
     border-top: 1px solid rgba(225, 225, 225, 1);
-    margin-top: 40px;
-    @include desktop {
-        margin-top: 60px;
-    }
 }
