@@ -2,10 +2,14 @@
   display: flex;
   justify-content: center;
   background-image: linear-gradient(to bottom,
-        var(--main-bg-color) 40%,
-        var(--main-bg-color) 40%,
-        var(--secondary-bg-color) 40%,
-      );
+    var(--main-bg-color) 40%,
+    var(--main-bg-color) 40%,
+    var(--secondary-bg-color) 40%,
+  );
+  margin-bottom: 80px;
+  @include desktop {
+    margin-bottom: 120px;
+  }
 }
 
 .gallery-wrapper__list {
