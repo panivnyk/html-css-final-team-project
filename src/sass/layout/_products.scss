@@ -1,15 +1,22 @@
+// Products section
+
 .products {
     padding-top: 80px;
     padding-bottom: 40px;
     @include mobile {
         padding-top: 40px;
         padding-bottom: 60px;}
+    @include tablet {
+        &__container {
+        padding-left: 32px;
+        padding-right: 32px;}}
     @include desktop {
         padding-top: 59px;}
         background-color: #ffffff;
         width: 100vw;
-}
- 
+        &__container {
+            padding-left: 16px;
+            padding-right: 16px;}}
 
 .products__pretitle {
     display: block;
@@ -17,13 +24,11 @@
     font-family: 'Titan One';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: var(--small-title-size);
     line-height: 1.17;
     @include tablet {
-        font-size: 26px;
         line-height: 1.15}
     @include desktop {
-        font-size: 30px;
         line-height: 1.13;
         letter-spacing: 0.04em;}
     text-transform: uppercase;
@@ -32,86 +37,77 @@
 
 .products__title {
     display: block;
+    margin-top: 15px;
+    margin-bottom: 140px;
     text-align: center;
     font-family: 'Titan One';
     font-style: normal;
     font-weight: 400;
-    font-size: 34px;  
+    font-size: var(--big-title-size);  
     line-height: 1.15;
     letter-spacing: 0.04em;
-    @include tablet {
-        font-size: 48px;}
-    @include desktop {
-        font-size: 58px;
-        line-height: 1.14;
-        letter-spacing: 0.06em;}
     text-transform: uppercase;
     color: var(--main-title-color);
-    margin-top: 15px;
-    margin-bottom: 0px;
-}
+    @include tablet {
+        margin-bottom: 154px;}
+    @include desktop {
+        margin-bottom: 261px;
+        line-height: 1.14;
+        letter-spacing: 0.06em;}
+   }
+// Product-cards
 
 .products-cards-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    row-gap: 140px;
     @include tablet {
-        display: flex;
         flex-wrap: wrap;
+        flex-direction: row;
         justify-content: center;
-        margin: 0;
-        padding-left: 4px;
-        padding-right: 4px;}
+        column-gap: 16px;}
     @include desktop {
-        margin: 0 -16px;
-        padding: 0;}
-}
-
+        column-gap: 32px;}
+    }
 
 .products-card {
     display: flex;
     align-items: center;
-    margin-top: 140px;
-    height: 489px;
     @include tablet {
-        margin-top: 154px;
-        margin-left: 8px;
-        margin-right: 8px;
-        flex-basis: calc((100% - 48px) / 3);
-        height: 473px;}
-        @include desktop {
-            margin-top: 261px;
-            margin-left: 16px;
-            margin-right: 16px;
-            flex-basis: calc((100% - 96px) / 3);
-            height: 535px;};
-        perspective: 2000px;}
+       flex-basis: calc((100% - 32px) / 3);}
+    @include desktop {
+        flex-basis: calc((100% - 64px) / 3);}
+    perspective: 2000px;}
 
 .card-box {
     position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 2000ms;
-    transform-style: preserve-3d;
-}
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 2000ms;
+        transform-style: preserve-3d;}
         
-// .products-card:hover .card-box {
-//     transform: rotateY(180deg);
-// }
-
 .do-flip {
     transform: rotateY(180deg);
 }
 
-.card-front {
+// Card design
+
+.card-front, .card-back {
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
     border-radius: 24px;
     flex-basis: 100%;
-    height: 489px;
     padding-top: 160px;
     padding-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
     @include tablet {
         margin-top: 0;
         margin-left: 0;
@@ -119,7 +115,9 @@
         flex-basis: 100%;
         height: 100%;
         padding-top: 118px;
-        padding-bottom: 40px;}
+        padding-bottom: 40px;
+        padding-left: 32px;
+        padding-right: 32px;}
     @include desktop {
         margin-top: 0;
         margin-left: 0;
@@ -127,63 +125,36 @@
         flex-basis: 100%;
         height: 100%;
         padding-top: 165px;
-        padding-bottom: 60px;};
-        transition: transform 0.8s;
-        transform-style: preserve-3d;}
-
-.products-card:nth-child(1) .card-front {
-    background-color: #FFB8CA;}
-.products-card:nth-child(2) .card-front {
-    background-color: #F0D1A5;}
-.products-card:nth-child(3) .card-front {
-    background-color: #C2E297;}
-
-
-
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+        padding-bottom: 60px;
+        padding-left: 75px;
+        padding-right: 75px;};
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;}
+
+    .card-back {
+    padding-top: 120px;
+    @include tablet {
+        padding-top: 95px;}
+    @include desktop {
+        padding-top: 125px;}
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
     }
 
-
-.card-back {
-display: flex;
-flex-direction: column;
-position: relative;
-align-items: center;
-border-radius: 24px;
-flex-basis: 100%;
-height: 489px;
-padding-top: 160px;
-padding-bottom: 40px;
-@include tablet {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    flex-basis: 100%;
-    height: 100%;
-    padding-top: 118px;
-    padding-bottom: 40px;}
-@include desktop {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    flex-basis: 100%;
-    height: 100%;
-    padding-top: 165px;
-    padding-bottom: 60px;}
-transform: rotateY(180deg);}
-    
+.products-card:nth-child(1) .card-front,
 .products-card:nth-child(1) .card-back {
-background-color: #FFB8CA;}
-.products-card:nth-child(2) .card-back {          
-background-color: #F0D1A5;}
-.products-card:nth-child(3) .card-back { 
-background-color: #C2E297;}
+    background-color: #FFB8CA;}
+.products-card:nth-child(2) .card-front,
+.products-card:nth-child(2) .card-back {
+    background-color: #F0D1A5;}
+.products-card:nth-child(3) .card-front,
+.products-card:nth-child(3) .card-back {
+    background-color: #C2E297;}
 
+// Picture on top
 
 .products-card:nth-child(1) .card-front::before {
     background-image: url(/images/img-products/prod-pic1-mob-1x.png);
@@ -265,8 +236,7 @@ background-color: #C2E297;}
         top: -261px;}
     }
 
-
-
+    // Information on card
 
 .products-card__title {
     display: flex;
@@ -274,10 +244,10 @@ background-color: #C2E297;}
     font-family: 'Titan One';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: var (--products-title-size);
     line-height: 1.15;
     @include desktop {
-        font-size: 20px;
+        font-size: var(--small-title-size);
         line-height: 1.13;}
     text-align: center;
     letter-spacing: 0.04em;
@@ -299,24 +269,18 @@ background-color: #C2E297;}
     width: 26px;
     height: 6px;
     transform: translate(-50%, -50%);
-
 }
 
 .products-card__text {
     display: flex;
-    margin-left: 40px;
-    margin-right: 40px;
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: var(--products-text-size);
     line-height: 1.52;
+    margin-bottom: 32px;
     @include tablet {
-        margin-left: 32px;
-        margin-right: 32px;
         line-height: 1.76;}
     @include desktop {
-        margin-left: 75px;
-        margin-right: 75px;
         font-size: 16px;}
     text-align: center;
     letter-spacing: 0.04em;
@@ -331,16 +295,28 @@ background-color: #C2E297;}
     margin-right: auto;
     margin-top: auto;
     margin-bottom: 0;
+    @include tablet {
+        margin-top: auto;}
+    @include desktop {
+        margin-top: auto;}
     align-items: center;
     justify-content: center;
     width: 40px;
-    height: 40px;
-    background-color: #fff;
+    min-height: 40px;
+    background-color: var(--thirdly-text-color);
     border-radius: 50%;
-    }
-
+    transition: background-color 300ms ease;
+}
 
 .arrow-icon {
-    fill: var(--main-title-color); 
-  }
+    fill: var(--main-btn-color); 
+    margin: auto; 
+    .arrow-button:hover & { 
+        fill: var(--modal-menu-bg-color);}
+    .arrow-button:focus & { 
+        fill: var(--modal-menu-bg-color);}
+ }
+
+   
+
 
