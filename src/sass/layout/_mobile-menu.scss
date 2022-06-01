@@ -1,93 +1,91 @@
 .mob-menu {
-    position: fixed;
-    padding-top: 20px;
-    overflow-y: auto;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 5;
-    background-color: var(--modal-menu-bg-color);
-    .container {
-        height: 100%;
-        overflow: auto;
-        position: relative;
-        padding: 0;
+  position: fixed;
+  padding-top: 20px;
+  overflow-y: auto;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 5;
+  background-color: var(--modal-menu-bg-color);
+  .container {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    padding: 0;
 
     @media screen and (min-width: 480px) {
-        width: 480px;
+      width: 480px;
     }
     @media screen and (min-width: 768px) {
-        width: 254px;
+      width: 254px;
     }
-        }
-    @media screen and (min-width: 768px) {
-        right: 0;
-        width: 254px;
-    }
-    
-    opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1),
-        transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @media screen and (min-width: 768px) {
+    right: 0;
+    width: 254px;
+  }
+
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mob-menu__animate {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .menu-close-btn {
-    display: flex;
-    padding: 0;
-    margin-bottom: 24px;
-    margin-left: auto;
-    margin-right: 20px;
-    border: none;
-    background: none;
-    top: 20px;
-    right: 20px;
-    @include tablet {
-        right: 32px;
-    }
-    cursor: pointer;
-    fill: white;
+  display: flex;
+  padding: 0;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: 20px;
+  border: none;
+  background: none;
+  top: 20px;
+  right: 20px;
+  @include tablet {
+    right: 32px;
+  }
+  cursor: pointer;
+  fill: var(--main-btn-text-color);
 }
 
 .buy-btn {
-    background-color: #FFFFFF;
-    color: #D41443;
-    &:hover {
-        background-color: #ECEBEB;
-    }
-    margin-bottom: 26px;
+  background-color: var(--secondary-bg-colorr);
+  color: var(--secondary-btn-text-color);
+  &:hover {
+    background-color: var(--secondary-btn-hover-color);
+  }
+  margin-bottom: 26px;
 }
 
 .buy-btn__icon {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .mob-menu-nav__link {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.29;
-    width: 100%;
+  text-decoration: none;
+  color: var(--thirdly-text-color);
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  width: 100%;
 }
 
 .mob-menu-nav__item {
-    display: flex;
-    padding: 11px 20px;
-    border-top: 1px solid #E18298;
-    border-bottom: 1px solid #E18298;
-    align-items: center;
-    &:hover .mob-menu-nav__link {
-        color: #D41443;
-    }
-    
+  display: flex;
+  padding: 11px 20px;
+  border-top: 1px solid #e18298;
+  border-bottom: 1px solid #e18298;
+  align-items: center;
+  &:hover .mob-menu-nav__link {
+    color: var(--secondary-btn-text-color);
+  }
 }
 
 .no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
