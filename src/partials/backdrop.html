@@ -1,7 +1,7 @@
 <!------------- backdrop ------------->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <div class="modal-top">
+            
         <button class="button-backdrop-close" data-modal-close>
           <svg class="" width="18" height="18">
             <use href="./images/sprite.svg#icon-close-1"></use>
@@ -11,39 +11,58 @@
         <p class="modal-title">Choose a product</p>
         <form class="">
 
+          <!-- ----  Checkbox prodacts ---- -->
+
             <div class="checkbox-prodacts">
                 <ul class="checkbox-prodacts__list">
                   <li class="checkbox-prodacts__item">
+
                       <input 
-              class="checkbox-prodacts__input"
+              class="checkbox-prodacts__input visually-hidden"
               type="checkbox"
               name="ice-cream"
               id="ice-cream"
             />
             <label class="checkbox-prodacts__label" 
-            for="ice-cream"><br>ice cream <br>(1.25$)</label>
+            for="ice-cream">
+            
+            <span class="checkbox-prodacts__check">
+                <svg class="checkbox-prodacts__icon">
+                  <use href="./images/sprite.svg#icon-ice-cream-4"></use>
+                </svg>
+              </span>            ice cream <br>(1.25$)
+          </label>
                   </li>
-
                   <li class="checkbox-prodacts__item">
                       <input 
-              class="checkbox-prodacts__input"
+              class="checkbox-prodacts__input visually-hidden"
               type="checkbox"
               name="ice-coffee"
               id="ice-coffee"
             />
             <label class="checkbox-prodacts__label" 
-            for="ice-coffee"><br>ice coffee <br>(1.1$)</label>
+            for="ice-coffee">
+            <span class="checkbox-prodacts__check">
+                <svg class="checkbox-prodacts__icon">
+                  <use href="./images/sprite.svg#icon-ice-cream-2"></use>
+                </svg>
+              </span>   ice coffee <br>(1.1$)</label>
                   </li>
 
                   <li class="checkbox-prodacts__item">
                       <input 
-              class="checkbox-prodacts__input"
+              class="checkbox-prodacts__input visually-hidden"
               type="checkbox"
               name="milkshakes"
               id="milkshakes"
             />
             <label class="checkbox-prodacts__label" 
-            for="milkshakes"><br>milkshakes <br>(1.2$)</label>
+            for="milkshakes">
+            <span class="checkbox-prodacts__check">
+                <svg class="checkbox-prodacts__icon">
+                  <use href="./images/sprite.svg#icon-ice-cream-3"></use>
+                </svg>
+              </span>  milkshakes <br>(1.2$)</label>
                   </li>
               </ul>
               
@@ -82,7 +101,7 @@
           </div>
           
 
-          
+
           <div class="checkbox-field">
             <input
               class="checkbox-input visually-hidden"
@@ -100,13 +119,15 @@
               I agree to the newsletter and accept the<a href=""> Privacy policy</a>
             </label>
             </div>
-            </div>
+            
 
                 </form>
-        <div class="modal-bottom">
+       
             <div class="button-field">
-            <button class="modal-button" type="submit">Send</button>
+              <form action="index.html">
+            <button class="modal-button" type="submit">Buy</button>
+            </form>
         </div>
-          </div>
+          
       </div>
     </div>
