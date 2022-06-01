@@ -152,7 +152,7 @@
 }
 // ============ Checkbox prodacts ============
 .checkbox-prodacts {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -162,10 +162,11 @@
 }
 .checkbox-prodacts__item {
     box-sizing: border-box;
-    width: calc(100% / 3 - 5px);;
+    width: calc(100% / 3 - 5px);
     padding: 8px;
     background-color: #FFB8CA;
-    border-radius: 10px;
+    border-radius: 30px;
+    
     &:not(:last-child) {
         margin-right: 5px;
     }
@@ -174,11 +175,20 @@
         border: 2px solid #D41443;
     }
 }
+
 .checkbox-prodacts__label {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 900;
-    font-size: 9px;
+    font-size: 8px;
+    cursor: pointer;
+    @media screen and (min-width: 380px) {
+        font-size: 10px;
+    }
+    @media screen and (min-width: 420px) {
+        font-size: 12px;
+    }
+    
     @include mobile {
         font-size: 16px;
     }
@@ -188,6 +198,27 @@
     text-transform: uppercase;
     color: #D41443;
 }
+
+.checkbox-prodacts__check {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5px auto;
+    background-color: white;
+    .checkbox-prodacts__input:checked+.checkbox-prodacts__label & {
+            border: 2px solid #D41443;
+        }
+}
+ .checkbox-prodacts__icon {
+    height: 25px;
+    fill: transparent;
+    .checkbox-prodacts__input:checked+.checkbox-prodacts__label & {
+        fill: #D41443;
+    }
+ }
 
 
 // ============ Checkbox modal ============
