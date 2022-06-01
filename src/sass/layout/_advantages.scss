@@ -4,12 +4,11 @@
 
   background-color: #fff5f6;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     background-image: url('../images/advantages/mobile-milk-1x-bg.png');
     background-size: contain;
     background-position: 0px 574px;
     background-repeat: no-repeat;
-
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../images/advantages/mobile-milk-2x-bg.png');
     }
@@ -26,7 +25,8 @@
 
     background-image: url('../images/advantages/desktop-milk-1x-bg.png');
     background-size: contain;
-    background-position: 0px 255px;
+    // background-position: 0px 255px;
+    background-position: 0px 215px;
     background-repeat: no-repeat;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -92,15 +92,15 @@
   &__flex {
     @include tablet {
       display: flex;
-      justify-content: center;
-
+      // justify-content: center;
+      justify-content: left;
       margin-right: auto;
       margin-left: auto;
     }
   }
 
   &__img {
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
     margin-right: auto;
     margin-left: auto;
 
@@ -117,12 +117,17 @@
   }
 
   &__content {
+    padding-top: 40px;
+    width: 220px;
     @include tablet {
-      margin-right: 18px;
+      width: 440px;
+      padding-top: 0;
     }
 
     @include desktop {
-      margin-right: 161px;
+      // margin-right: 161px;
+      width: 463px;
+      padding-top: 72px;
     }
   }
 
@@ -134,7 +139,7 @@
     font-weight: 500;
     font-size: var(--main-text-size);
     line-height: 1.6;
-    width: 220px;
+    // width: 220px;
 
     color: var(--main-text-color);
 
@@ -143,7 +148,7 @@
     }
 
     @include desktop {
-      margin-top: 72px;
+      // margin-top: 72px;
       margin-bottom: 32px;
       width: 463px;
 
@@ -159,7 +164,7 @@
     font-weight: 500;
     font-size: var(--main-text-size);
     line-height: 1.6;
-    width: 220px;
+    // width: 220px;
 
     color: var(--secondary-text-color);
 
@@ -181,7 +186,7 @@
 }
 
 .advantages-list {
-  padding-right: 70px;
+  // padding-right: 70px;
   padding-top: 66px;
   padding-bottom: 0;
 

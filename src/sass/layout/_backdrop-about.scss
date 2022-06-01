@@ -1,0 +1,27 @@
+.modal {
+  background-color: var(--main-bg-color);
+
+  @include mobile {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 528px;
+  }
+}
+.modal-icon {
+  fill: var(--secondary-btn-text-color);
+}
+
+.button-about {
+  margin-top: auto;
+}
+
+.modal-title__about {
+  font-weight: normal;
+}
+
+.form-text__about {
+  height: 70px;
+  margin-bottom: 20px;
+}
