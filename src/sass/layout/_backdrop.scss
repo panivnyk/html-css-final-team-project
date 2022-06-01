@@ -13,14 +13,13 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  position: absolute;
   top: 50%;
   left: 50%;
   max-height: 95vh;
   transform: translate(-50%, -50%);
   overflow: auto;
   padding: 20px 30px;
-  background-color: white;
+  background-color: var(--secondary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -46,13 +45,13 @@
   margin: 8px 8px 0 0;
   padding: 0;
   cursor: pointer;
-  background: #ffa5ba;
+  background: var(--pretitle-color);
   border: none;
   box-sizing: border-box;
   border-radius: 50%;
 
   &:hover {
-    background: #d41443;
+    background: var(--main-title-color);
   }
 }
 
@@ -63,7 +62,7 @@
   text-align: center;
   letter-spacing: 0.07em;
   margin-bottom: 15px;
-  color: #d41443;
+  color: var(--main-title-color);
   font-family: 'Titan One';
 
   @include desktop {
@@ -187,7 +186,7 @@
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #d41443;
+  color: var(-main-title-color);
 }
 
 .checkbox-prodacts__check {
@@ -198,7 +197,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 5px auto;
-  background-color: white;
+  background-color: var(--secondary-bg-color);
   .checkbox-prodacts__input:checked + .checkbox-prodacts__label & {
     border: 2px solid #d41443;
   }
@@ -208,7 +207,7 @@
   fill: #757575;
   opacity: 0.4;
   .checkbox-prodacts__input:checked + .checkbox-prodacts__label & {
-    fill: #d41443;
+    fill: var(--main-btn-color);
     opacity: 1;
   }
 }
@@ -255,12 +254,12 @@
   fill: transparent;
 
   .checkbox-input:checked + .checkbox-label & {
-    fill: white;
+    fill: var(--secondary-btn-color);
   }
 }
 
 .checkbox-input:checked + .checkbox-label span {
-  background-color: #d41443;
+  background-color: var(--main-btn-color);
   border: 1px solid transparent;
 }
 
@@ -276,10 +275,10 @@
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  background: #d41443;
+  background: var(--main-btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 22px;
-  color: white;
+  color: var(--secondary-btn-color);
   border: 2px solid #d41443;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
