@@ -13,14 +13,14 @@
         position: relative;
         padding: 0;
 
-    @media screen and (min-width: 480px) {
+    @include mobile {
         width: 480px;
     }
-    @media screen and (min-width: 768px) {
+    @include tablet {
         width: 254px;
     }
         }
-    @media screen and (min-width: 768px) {
+    @include tablet {
         right: 0;
         width: 254px;
     }
@@ -49,14 +49,14 @@
         right: 32px;
     }
     cursor: pointer;
-    fill: white;
+    fill: var(--main-btn-text-color);
 }
 
 .buy-btn {
-    background-color: #FFFFFF;
-    color: #D41443;
+    background-color: var(--secondary-bg-color);
+    color: var(--main-btn-color);
     &:hover {
-        background-color: #ECEBEB;
+        background-color: var(--secondary-btn-hover-color);
     }
     margin-bottom: 26px;
 }
@@ -67,7 +67,7 @@
 
 .mob-menu-nav__link {
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--thirdly-text-color);
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
@@ -83,7 +83,7 @@
     border-bottom: 1px solid #E18298;
     align-items: center;
     &:hover .mob-menu-nav__link {
-        color: #D41443;
+        color: var(--main-title-color);
     }
     
 }
