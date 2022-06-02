@@ -1,5 +1,5 @@
 .footer {
-    background-color: rgba(255, 245, 246, 1);
+    background-color: var(--main-bg-color);
     width: 100%;
     padding-top: 24px;
     @include tablet {
@@ -30,7 +30,7 @@
     letter-spacing: 0em;
     text-align: left;
     text-transform: uppercase;
-    color: rgba(255, 165, 186, 1);
+    color: var(--pretitle-color);
     @include tablet {
         width: 320px;
         font-size: 26px;
@@ -50,7 +50,7 @@
     letter-spacing: 0.04em;
     text-align: left;
     text-transform: uppercase;
-    color: rgba(212, 20, 67, 1);
+    color: var(--main-title-color);
     @include tablet {
         font-size: 48px;
         width: 340px;
@@ -88,7 +88,7 @@
     border-radius: 50%;
     background: rgba(254, 165, 187, 1);
     &:hover {
-    background: rgba(212, 20, 67, 1);
+    background: var(--main-btn-color);
     }
     &:not(:last-child) {
     margin-right: 28px;
@@ -115,12 +115,12 @@
     justify-content: center;
     align-items: center;
     &:focus {
-        background-color: rgba(212, 20, 67, 1);
+        background-color: var(--main-btn-color);
     }
 }
 
 .social-network__icon {
-    fill:rgba(255, 255, 255, 1);
+    fill:var(--main-btn-text-color);
 }
 
 .social-network__icon--tel {
@@ -148,7 +148,7 @@
     line-height: 1.83;
     letter-spacing: 0em;
     text-align: right;
-    color: rgba(212, 20, 67, 1);
+    color: var(--main-title-color);
     @include tablet {
         font-size: 14px;
     }
@@ -164,7 +164,7 @@
 }
 
 .contact__copyright {
-    color: rgba(144, 126, 130, 1);
+    color: var(--secondary-text-color);
     font-family: DM Sans;
     font-style: normal;
     font-size: 14px;
@@ -175,5 +175,5 @@
 }
 
 .decor-line {
-    border-top: 1px solid rgba(225, 225, 225, 1);
+    border-top: 1px solid #E1E1E1;
 }
