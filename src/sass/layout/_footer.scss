@@ -87,6 +87,8 @@
     width: 32px;
     border-radius: 50%;
     background: rgba(254, 165, 187, 1);
+    transition-duration: var(--time-transition);
+        transition-timing-function: var(--typical-cubic);
     &:hover {
     background: var(--main-btn-color);
     }
@@ -114,6 +116,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
     &:focus {
         background-color: var(--main-btn-color);
     }
@@ -157,6 +160,8 @@
 .contact__copyright-blok {
     padding-top: 16px;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
     @include tablet {
         padding-top: 8px;
         padding-bottom: 8px;
@@ -164,6 +169,7 @@
 }
 
 .contact__copyright {
+    width: 140px;
     color: var(--secondary-text-color);
     font-family: DM Sans;
     font-style: normal;
@@ -172,6 +178,9 @@
     line-height: 1.5;
     letter-spacing: 0em;
     text-align: center;
+    @include tablet {
+        width: 276px;
+    }
 }
 
 .decor-line {
