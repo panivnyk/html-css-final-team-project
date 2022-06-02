@@ -177,3 +177,9 @@
 .decor-line {
     border-top: 1px solid #E1E1E1;
 }
+
+.contact__br {
+    @include tablet {
+        display: none;
+    }
+}

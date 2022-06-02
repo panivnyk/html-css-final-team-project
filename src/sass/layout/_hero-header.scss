@@ -144,13 +144,7 @@
     color: var(--secondary-btn-text-color);
     display: none;
     cursor: pointer;
-    transition: background-color var(--transition-duration) var(--transition-timing);
-    &::after {
-            content: '>';
-            margin-left: 12px;
-            width: 8px;
-            height: 8px;
-        }    
+    transition: background-color var(--transition-duration) var(--transition-timing);  
     &:hover, &:focus {
         background-color: var(--secondary-btn-hover-color);
     }
