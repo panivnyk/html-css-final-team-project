@@ -157,6 +157,8 @@
 .contact__copyright-blok {
     padding-top: 16px;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
     @include tablet {
         padding-top: 8px;
         padding-bottom: 8px;
@@ -164,6 +166,7 @@
 }
 
 .contact__copyright {
+    width: 140px;
     color: rgba(144, 126, 130, 1);
     font-family: DM Sans;
     font-style: normal;
@@ -172,6 +175,9 @@
     line-height: 1.5;
     letter-spacing: 0em;
     text-align: center;
+    @include tablet {
+        width: 276px;
+    }
 }
 
 .decor-line {
